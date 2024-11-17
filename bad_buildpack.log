@@ -1,0 +1,210 @@
+[33;1mWarning: [0mNo cached data will be used, no cache specified.
+[36m===> ANALYZING[0m
+Restoring data for SBOM from previous image
+[36m===> DETECTING[0m
+target distro name/version labels not found, reading /etc/os-release file
+target distro name/version labels not found, reading /etc/os-release file
+10 of 26 buildpacks participating
+paketo-buildpacks/ca-certificates   3.8.6
+paketo-buildpacks/bellsoft-liberica 11.0.0
+paketo-buildpacks/syft              2.4.0
+paketo-buildpacks/maven             6.19.0
+paketo-buildpacks/executable-jar    6.11.3
+paketo-buildpacks/apache-tomcat     8.3.2
+paketo-buildpacks/apache-tomee      1.10.4
+paketo-buildpacks/liberty           4.3.2
+paketo-buildpacks/dist-zip          5.8.5
+paketo-buildpacks/spring-boot       5.31.2
+[36m===> RESTORING[0m
+Restoring metadata for "paketo-buildpacks/ca-certificates:helper" from app image
+Restoring metadata for "paketo-buildpacks/bellsoft-liberica:helper" from app image
+Restoring metadata for "paketo-buildpacks/bellsoft-liberica:java-security-properties" from app image
+Restoring metadata for "paketo-buildpacks/bellsoft-liberica:jre" from app image
+Restoring metadata for "paketo-buildpacks/spring-boot:helper" from app image
+Restoring metadata for "paketo-buildpacks/spring-boot:web-application-type" from app image
+[36m===> BUILDING[0m
+target distro name/version labels not found, reading /etc/os-release file
+[34m[0m
+[34m[1mPaketo Buildpack for CA Certificates[0m[34m 3.8.6[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/ca-certificates[0m
+  [2mBuild Configuration:[0m
+[2m    $BP_EMBED_CERTS                    false  Embed certificates into the image[0m
+[2m    $BP_ENABLE_RUNTIME_CERT_BINDING    true   Deprecated: Enable/disable certificate helper layer to add certs at runtime[0m
+[2m    $BP_RUNTIME_CERT_BINDING_DISABLED  false  Disable certificate helper layer to add certs at runtime[0m
+  [34mLaunch Helper[0m: [32mReusing[0m cached layer
+[34m[0m
+[34m[1mPaketo Buildpack for BellSoft Liberica[0m[34m 11.0.0[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/bellsoft-liberica[0m
+  [2mBuild Configuration:[0m
+[2m    $BP_JVM_JLINK_ARGS           --no-man-pages --no-header-files --strip-debug --compress=1  configure custom link arguments (--output must be omitted)[0m
+[2m    $BP_JVM_JLINK_ENABLED        false                                                        enables running jlink tool to generate custom JRE[0m
+[2m    $BP_JVM_TYPE                 JRE                                                          the JVM type - JDK or JRE[0m
+[2m    $BP_JVM_VERSION              17[0m
+[2m                                                              the Java version[0m
+  [2mLaunch Configuration:[0m
+[2m    $BPL_DEBUG_ENABLED           false                                                        enables Java remote debugging support[0m
+[2m    $BPL_DEBUG_PORT              8000                                                         configure the remote debugging port[0m
+[2m    $BPL_DEBUG_SUSPEND           false                                                        configure whether to suspend execution until a debugger has attached[0m
+[2m    $BPL_HEAP_DUMP_PATH                                                                       write heap dumps on error to this path[0m
+[2m    $BPL_JAVA_NMT_ENABLED        true                                                         enables Java Native Memory Tracking (NMT)[0m
+[2m    $BPL_JAVA_NMT_LEVEL          summary                                                      configure level of NMT, summary or detail[0m
+[2m    $BPL_JFR_ARGS                                                                             configure custom Java Flight Recording (JFR) arguments[0m
+[2m    $BPL_JFR_ENABLED             false                                                        enables Java Flight Recording (JFR)[0m
+[2m    $BPL_JMX_ENABLED             false                                                        enables Java Management Extensions (JMX)[0m
+[2m    $BPL_JMX_PORT                5000                                                         configure the JMX port[0m
+[2m    $BPL_JVM_HEAD_ROOM           0                                                            the headroom in memory calculation[0m
+[2m    $BPL_JVM_LOADED_CLASS_COUNT  35% of classes                                               the number of loaded classes in memory calculation[0m
+[2m    $BPL_JVM_THREAD_COUNT        250                                                          the number of threads in memory calculation[0m
+[2m    $JAVA_TOOL_OPTIONS                                                                        the JVM launch flags[0m
+[2m    [2mUsing Java version 17[0m
+[2m     from BP_JVM_VERSION[0m[2m[0m
+  [34mBellSoft Liberica JDK 17.0.13[0m: [33mContributing[0m to layer
+[2m    [33mDownloading[0m[2m from https://github.com/bell-sw/Liberica/releases/download/17.0.13+12/bellsoft-jdk17.0.13+12-linux-amd64.tar.gz[0m
+[2m    Verifying checksum[0m
+[2m    Expanding to /layers/paketo-buildpacks_bellsoft-liberica/jdk[0m
+[2m    Adding 146 container CA certificates to JVM truststore[0m
+[2m    Writing env.build/JAVA_HOME.override[0m
+[2m    Writing env.build/JDK_HOME.override[0m
+  [34mBellSoft Liberica JRE 17.0.13[0m: [32mReusing[0m cached layer
+  [34mLaunch Helper[0m: [32mReusing[0m cached layer
+  [34mJava Security Properties[0m: [32mReusing[0m cached layer
+[34m[0m
+[34m[1mPaketo Buildpack for Syft[0m[34m 2.4.0[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/syft[0m
+[2m    [33mDownloading[0m[2m from https://github.com/anchore/syft/releases/download/v1.15.0/syft_1.15.0_linux_amd64.tar.gz[0m
+[2m    Verifying checksum[0m
+[2m    Writing env.build/SYFT_CHECK_FOR_APP_UPDATE.default[0m
+[34m[0m
+[34m[1mPaketo Buildpack for Maven[0m[34m 6.19.0[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/maven[0m
+  [2mBuild Configuration:[0m
+[2m    $BP_EXCLUDE_FILES                                                                            colon separated list of glob patterns, matched source files are removed[0m
+[2m    $BP_INCLUDE_FILES                                                                            colon separated list of glob patterns, matched source files are included[0m
+[2m    $BP_JAVA_INSTALL_NODE                 true[0m
+[2m                                                      whether to install Yarn/Node binaries based on the presence of a package.json or yarn.lock file[0m
+[2m    $BP_MAVEN_ACTIVE_PROFILES             dev[0m
+[2m                                                       the active profiles (comma separated: such as: p1,!p2,?p3) to pass to Maven[0m
+[2m    $BP_MAVEN_ADDITIONAL_BUILD_ARGUMENTS                                                         the additionnal arguments (appended to BP_MAVEN_BUILD_ARGUMENTS) to pass to Maven[0m
+[2m    $BP_MAVEN_BUILD_ARGUMENTS             -Dmaven.test.skip=true --no-transfer-progress package  the arguments to pass to Maven[0m
+[2m    $BP_MAVEN_BUILT_ARTIFACT              target/*.[ejw]ar                                       the built application artifact explicitly.  Supersedes $BP_MAVEN_BUILT_MODULE[0m
+[2m    $BP_MAVEN_BUILT_MODULE                                                                       the module to find application artifact in[0m
+[2m    $BP_MAVEN_DAEMON_ENABLED              false                                                  use maven daemon[0m
+[2m    $BP_MAVEN_POM_FILE                    pom.xml                                                the location of the main pom.xml file, relative to the application root[0m
+[2m    $BP_MAVEN_SETTINGS_PATH                                                                      the path to a Maven settings file[0m
+[2m    $BP_MAVEN_VERSION                     3                                                      the Maven version[0m
+[2m    $BP_NODE_PROJECT_PATH                                                                        configure a project subdirectory to look for `package.json` and `yarn.lock` files[0m
+[2m    Creating cache directory /home/cnb/.m2[0m
+  [34mCompiled Application[0m: [33mContributing[0m to layer
+[2m    Executing mvnw --batch-mode -Dmaven.test.skip=true --no-transfer-progress package -P dev[0m
+      [0m[0m[INFO] Scanning for projects...
+      [WARNING] 
+      [WARNING] Some problems were encountered while building the effective model for com.example:demo:jar:0.0.1-SNAPSHOT
+      [WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:exec-maven-plugin is missing. @ line 52, column 21
+      [WARNING] 
+      [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+      [WARNING] 
+      [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+      [WARNING] 
+      [WARNING] The requested profile "dev" could not be activated because it does not exist.
+      [INFO] 
+      [INFO] --------------------------< com.example:demo >--------------------------
+      [INFO] Building demo 0.0.1-SNAPSHOT
+      [INFO]   from pom.xml
+      [INFO] --------------------------------[ jar ]---------------------------------
+      [INFO] 
+      [INFO] --- exec:3.5.0:exec (npm-ci) @ demo ---
+      [ERROR] Command execution failed.
+      java.io.IOException: Cannot run program "npm" (in directory "/workspace"): error=2, No such file or directory
+          at java.lang.ProcessBuilder.start (ProcessBuilder.java:1143)
+          at java.lang.ProcessBuilder.start (ProcessBuilder.java:1073)
+          at org.codehaus.mojo.exec.ExtendedExecutor.launch (ExtendedExecutor.java:62)
+          at org.apache.commons.exec.DefaultExecutor.executeInternal (DefaultExecutor.java:295)
+          at org.apache.commons.exec.DefaultExecutor.execute (DefaultExecutor.java:253)
+          at org.codehaus.mojo.exec.ExecMojo.executeCommandLine (ExecMojo.java:903)
+          at org.codehaus.mojo.exec.ExecMojo.executeCommandLine (ExecMojo.java:863)
+          at org.codehaus.mojo.exec.ExecMojo.execute (ExecMojo.java:454)
+          at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+          at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+          at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+          at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+          at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+          at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+          at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+          at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+          at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+          at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+          at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+          at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+          at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+          at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+          at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+          at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+          at java.lang.reflect.Method.invoke (Method.java:569)
+          at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+          at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+          at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+          at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+      Caused by: java.io.IOException: error=2, No such file or directory
+          at java.lang.ProcessImpl.forkAndExec (Native Method)
+          at java.lang.ProcessImpl.<init> (ProcessImpl.java:314)
+          at java.lang.ProcessImpl.start (ProcessImpl.java:244)
+          at java.lang.ProcessBuilder.start (ProcessBuilder.java:1110)
+          at java.lang.ProcessBuilder.start (ProcessBuilder.java:1073)
+          at org.codehaus.mojo.exec.ExtendedExecutor.launch (ExtendedExecutor.java:62)
+          at org.apache.commons.exec.DefaultExecutor.executeInternal (DefaultExecutor.java:295)
+          at org.apache.commons.exec.DefaultExecutor.execute (DefaultExecutor.java:253)
+          at org.codehaus.mojo.exec.ExecMojo.executeCommandLine (ExecMojo.java:903)
+          at org.codehaus.mojo.exec.ExecMojo.executeCommandLine (ExecMojo.java:863)
+          at org.codehaus.mojo.exec.ExecMojo.execute (ExecMojo.java:454)
+          at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+          at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+          at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+          at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+          at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+          at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+          at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+          at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+          at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+          at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+          at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+          at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+          at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+          at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+          at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+          at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+          at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+          at java.lang.reflect.Method.invoke (Method.java:569)
+          at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+          at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+          at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+          at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+      [INFO] ------------------------------------------------------------------------
+      [INFO] BUILD FAILURE
+      [INFO] ------------------------------------------------------------------------
+      [INFO] Total time:  6.217 s
+      [INFO] Finished at: 2024-11-17T18:12:29Z
+      [INFO] ------------------------------------------------------------------------
+      [WARNING] The requested profile "dev" could not be activated because it does not exist.
+      [ERROR] Failed to execute goal org.codehaus.mojo:exec-maven-plugin:3.5.0:exec (npm-ci) on project demo: Command execution failed. Cannot run program "npm" (in directory "/workspace"): error=2, No such file or directory -> [Help 1]
+      [ERROR] 
+      [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+      [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+      [ERROR] 
+      [ERROR] For more information about the errors and possible solutions, please read the following articles:
+      [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+      [0m[0munable to invoke layer creator
+unable to contribute application layer
+error running build
+exit status 1
+[31;1mERROR: [0mfailed to build: exit status 1
