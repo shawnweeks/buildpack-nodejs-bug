@@ -1,6 +1,4 @@
 ```shell
-./mvnw clean package
-
 # Build with Pack
 pack build com.example/demo:latest \
     --builder paketobuildpacks/builder-jammy-tiny \
